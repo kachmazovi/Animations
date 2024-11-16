@@ -139,7 +139,7 @@ table {
 .tiktok .bg {
   height: 100%;
   background-color: black;
-  border-radius: 50px;
+  border-radius: 20%;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -226,6 +226,111 @@ table {
   50% {
     top: 0;
     transform: rotate(0deg);
+  }
+}
+.tiktok_v2 {
+  height: 100%;
+  position: relative;
+}
+.tiktok_v2 .bg,
+.tiktok_v2 .shadow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.tiktok_v2 .bg {
+  width: 50%;
+  height: 50%;
+  border-radius: 20%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  top: 0;
+  animation: bg-move 2s infinite linear;
+}
+.tiktok_v2 .bg .icon {
+  width: 90%;
+  height: 90%;
+  background-image: url(assets/tiktok/icon.svg);
+  background-size: contain;
+}
+.tiktok_v2 .shadow {
+  width: 70%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: gray;
+  animation: shadow-color 2s infinite linear;
+}
+
+@keyframes bg-move {
+  15% {
+    top: 4%;
+  }
+  20% {
+    top: 7%;
+  }
+  25% {
+    top: 11%;
+  }
+  30% {
+    top: 16%;
+  }
+  35% {
+    top: 22%;
+  }
+  40% {
+    top: 29%;
+  }
+  45% {
+    top: 36%;
+    transform: translateX(-50%) scale(1, 1.1);
+  }
+  50% {
+    top: 48%;
+    transform: translateX(-50%) scale(1.1, 0.9);
+  }
+  55% {
+    top: 36%;
+    transform: translateX(-50%) scale(1, 1.1);
+  }
+  60% {
+    top: 29%;
+  }
+  65% {
+    top: 22%;
+  }
+  70% {
+    top: 16%;
+  }
+  75% {
+    top: 11%;
+  }
+  80% {
+    top: 7%;
+  }
+  85% {
+    top: 4%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes shadow-color {
+  0% {
+    background-color: gainsboro;
+  }
+  30% {
+    background-color: gainsboro;
+  }
+  50% {
+    background-color: gray;
+    width: 60%;
+  }
+  100% {
+    background-color: gainsboro;
   }
 }
 body {

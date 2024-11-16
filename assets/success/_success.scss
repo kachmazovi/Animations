@@ -1,0 +1,145 @@
+.success {
+  height: 100%;
+  position: relative;
+
+  // min-width: 250px;
+  // min-height: 250px;
+
+  .outter-circle,
+  .inner-circle,
+  .check {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  .outter-circle {
+    animation: outter 1.5s linear infinite;
+  }
+
+  .inner-circle {
+    animation: inner 1.5s linear infinite;
+  }
+
+  .check {
+    background-color: #2eb53c;
+    animation: check 1.5s linear infinite;
+
+    .line-1,
+    .line-2 {
+      height: 10%;
+      border-radius: 20px;
+      position: absolute;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: white;
+      }
+    }
+
+    .line-1 {
+      width: 33%;
+      transform: rotate(45deg);
+      top: 57%;
+      left: 20%;
+
+      &::before {
+        animation: line-1 1.5s linear infinite;
+      }
+    }
+
+    .line-2 {
+      width: 50%;
+      transform: rotate(315deg);
+      top: 50%;
+      left: 35%;
+
+      &::before {
+        animation: line-2 1.5s linear infinite;
+      }
+    }
+  }
+
+  @keyframes outter {
+    0% {
+      border: 5px solid #2eb53c;
+    }
+    50% {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      border: 20px solid #2eb53c;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes inner {
+    20% {
+      width: 0;
+      height: 0;
+      border: 5px solid #2eb53c;
+    }
+    40% {
+      width: 60%;
+      height: 60%;
+      border: 10px solid #2eb53c;
+    }
+    100% {
+      opacity: 0;
+      width: 60%;
+      height: 60%;
+      border: 10px solid #2eb53c;
+    }
+  }
+
+  @keyframes check {
+    30% {
+      width: 0;
+      height: 0;
+    }
+    50% {
+      width: 70%;
+      height: 70%;
+    }
+    100% {
+      width: 60%;
+      height: 60%;
+    }
+  }
+
+  @keyframes line-1 {
+    50% {
+      width: 0%;
+    }
+    60% {
+      width: 100%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes line-2 {
+    60% {
+      width: 0%;
+    }
+    70% {
+      width: 100%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}

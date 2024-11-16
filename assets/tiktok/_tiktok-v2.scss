@@ -1,8 +1,8 @@
 .tiktok_v2 {
   height: 100%;
   position: relative;
-  //   width: 250px;
-  //   height: 250px;
+  //   min-width: 250px;
+  //   min-height: 250px;
 
   .bg,
   .shadow {
@@ -29,6 +29,8 @@
       height: 90%;
       background-image: url(assets/tiktok/icon.svg);
       background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
 
@@ -100,11 +102,11 @@
     background-color: gainsboro;
   }
   30% {
-    background-color: gainsboro;
+    // background-color: gainsboro;
   }
   50% {
     background-color: gray;
-    width: 60%;
+    width: 55%;
   }
   100% {
     background-color: gainsboro;

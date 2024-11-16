@@ -151,10 +151,11 @@ table {
   height: 90%;
   background-image: url(assets/tiktok/icon.svg);
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   animation: icon 1.5s infinite linear;
 }
-
 @keyframes bg-rotate {
   0% {
     transform: translateY(64%) scale(0.2) rotate(80deg);
@@ -228,6 +229,7 @@ table {
     transform: rotate(0deg);
   }
 }
+
 .tiktok_v2 {
   height: 100%;
   position: relative;
@@ -256,6 +258,8 @@ table {
   height: 90%;
   background-image: url(assets/tiktok/icon.svg);
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .tiktok_v2 .shadow {
   width: 70%;
@@ -322,17 +326,77 @@ table {
   0% {
     background-color: gainsboro;
   }
-  30% {
-    background-color: gainsboro;
-  }
   50% {
     background-color: gray;
-    width: 60%;
+    width: 55%;
   }
   100% {
     background-color: gainsboro;
   }
 }
+.call-ringing {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.call-ringing .icon {
+  width: 80%;
+  height: 80%;
+  background-image: url(assets/call-ringing/icon.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: shake 0.2s infinite;
+}
+.call-ringing .icon::after, .call-ringing .icon::before {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border-color: #ec4778;
+  border-style: solid;
+  animation: circle 0.5s infinite;
+}
+.call-ringing .icon::before {
+  animation: circle 1s infinite;
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes circle {
+  0% {
+    opacity: 1;
+    width: 0;
+    height: 0;
+    border-width: 0px;
+  }
+  100% {
+    width: 90%;
+    height: 90%;
+    border-width: 45px;
+  }
+}
+
 body {
   height: 100vh;
   padding: 100px;
@@ -348,7 +412,6 @@ body .container {
   gap: 50px;
 }
 body .container .box {
-  width: 250px;
-  height: 250px;
-  border: 1px solid black;
+  min-width: 250px;
+  min-height: 250px;
 }/*# sourceMappingURL=styles.css.map */

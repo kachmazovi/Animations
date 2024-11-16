@@ -1,0 +1,71 @@
+.call-ringing {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  //   min-width: 250px;
+  //   min-height: 250px;
+
+  .icon {
+    width: 80%;
+    height: 80%;
+    background-image: url(assets/call-ringing/icon.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    animation: shake 0.2s infinite;
+
+    &::after,
+    &::before {
+      content: "";
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      border-color: #ec4778;
+      border-style: solid;
+      animation: circle 0.5s infinite;
+    }
+
+    &::before {
+      animation: circle 1s infinite;
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(5deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes circle {
+    0% {
+      opacity: 1;
+      width: 0;
+      height: 0;
+      border-width: 0px;
+    }
+    100% {
+      width: 90%;
+      height: 90%;
+      border-width: 45px;
+    }
+  }
+}

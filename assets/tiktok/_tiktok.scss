@@ -1,0 +1,102 @@
+.tiktok {
+  height: 100%;
+  //   min-width: 250px;
+  //   min-height: 250px;
+
+  .bg {
+    height: 100%;
+    background-color: black;
+    border-radius: 20%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bg-rotate 1.5s infinite linear;
+
+    .icon {
+      width: 90%;
+      height: 90%;
+      background-image: url(assets/tiktok/icon.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      animation: icon 1.5s infinite linear;
+    }
+  }
+
+  @keyframes bg-rotate {
+    0% {
+      transform: translateY(64%) scale(0.2) rotate(80deg);
+    }
+    2.5% {
+      transform: translateY(56%) scale(0.3) rotate(70deg);
+    }
+    5% {
+      transform: translateY(48%) scale(0.4) rotate(60deg);
+    }
+    7.5% {
+      transform: translateY(40%) scale(0.5) rotate(50deg);
+    }
+    10% {
+      transform: translateY(32%) scale(0.6) rotate(40deg);
+    }
+    12.5% {
+      transform: translateY(24%) scale(0.7) rotate(30deg);
+    }
+    15% {
+      transform: translateY(16%) scale(0.8) rotate(20deg);
+    }
+    17.5% {
+      transform: translateY(8%) scale(0.9) rotate(10deg);
+    }
+    20% {
+      transform: translateY(0%) scale(1) rotate(0deg);
+    }
+    22.5% {
+      transform: translateY(-8%) scale(1.1) rotate(-10deg);
+    }
+    25% {
+      transform: translateY(-16%) scale(1.2) rotate(-20deg);
+    }
+    27.5% {
+      transform: translateY(-8%) scale(1.1) rotate(-10deg);
+    }
+    30% {
+      transform: translateY(0%) scale(1) rotate(0deg);
+    }
+    40% {
+      transform: translate(10px, 20px) scale(0.9) rotate(3deg);
+    }
+    50% {
+      transform: translateY(0%) rotate(0deg);
+    }
+  }
+
+  @keyframes icon {
+    0% {
+      top: 100%;
+    }
+    22.5% {
+      top: 100%;
+      transform: translateY(8%) scale(1.5, 0.5) rotate(10deg);
+    }
+    25% {
+      transform: translateY(8%) rotate(20deg);
+    }
+    27.5% {
+      transform: translateY(8%) rotate(10deg);
+    }
+    30% {
+      top: -20%;
+      transform: translateY(0%) scale(1.5, 0.5) rotate(0deg);
+    }
+    40% {
+      transform: translate(-10px, -20px) scale(1.1) rotate(-3deg);
+    }
+    50% {
+      top: 0;
+      transform: rotate(0deg);
+    }
+  }
+}
